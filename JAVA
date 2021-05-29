@@ -1,0 +1,124 @@
+package programacao_java;													//pacote_do_java
+import java.util.Scanner; 													//biblioteca_para_leitura_de_dados
+import java.text.DecimalFormat;												//biblioteca_para_diminuir_casas_decimais
+public class classe_java {													//clase_do_java
+
+	public static void main(String[] args) {								//metodo_principal
+		// TODO Auto-generated method stub				
+		Scanner in = new Scanner(System.in); //comando_necessário para_a leitura_de_dados
+		
+	//	System.out.println("Digite [1] para iniciar ");
+	//	int num = in.nextInt();
+	//	System.err.println();
+	//if(num != 1) {
+			
+			//System.out.println("Número inválido");
+		//	System.out.println("Programa encerrado");
+		//}else {
+		//	if(num == 1) {
+			//do {
+			System.out.println("-----------------------------------");	
+			System.out.println("        Tabuada inteligente        ");
+			System.out.println("-----------------------------------");
+			System.out.println("Número que deseja fazer a operação:");
+					float valor = in.nextFloat();
+				
+					System.out.println("Até qual valor ? ");		
+		
+					float numero = in.nextFloat();		
+			
+					if( numero == 0) {
+							
+					System.out.println("Numero inválido");
+					//	break;
+								}
+					float nu = numero ;
+					
+					while ( nu > 1) {
+						
+								nu-- ;
+						
+					}if(nu != 1) {
+						System.out.println();
+						System.out.println("Valor com número decimal\nou negativo detectado! ");
+						System.out.println();
+						System.out.println("Programa encerrado.");
+						//	break ;
+					}if(nu == 1) {
+						
+							if(numero > 101 || valor > 101 ) {
+									
+									for( float i = 10 , j = valor ; i < numero  ; i++ ) {
+										DecimalFormat formatador = new DecimalFormat("0.000") ;														
+										System.out.println(j+ " x " +i+ " = " +formatador.format(i*j)+"    "
+												+ "   |   " +j+ " / " +i+ " = " +formatador.format(j/i));     							
+									}
+								}
+								if(numero >= 11 || valor >= 11 ) {
+									
+									System.out.println("-----------------------------------------------");
+									for( float i = 1 , j = valor ; (i < numero +1) ; i++ ) {
+										DecimalFormat formatador = new DecimalFormat("0.00") ;														
+										System.out.println(j+ " x " +i+ " = " +formatador.format(i*j)+" "
+										       + "   |   " +j+ " / " +i+ " = " +formatador.format(j/i));							
+		
+									}System.out.println("-----------------------------------------------");
+									
+									for( float i = 1 , j = valor ; (i < numero +1) ; i++ ) {
+										DecimalFormat formatador = new DecimalFormat("0.00") ;														
+										
+										
+										System.out.println(j+ " + " +i+ " = " +formatador.format(i+j)+" "
+										      + "   |   " +j+ " - " +i+ " = " +formatador.format(j-i));
+								     	System.out.println("--------------------------------------------");
+									}
+								
+								}
+								
+							if(numero <= 10 && valor <= 10 ) {
+								
+											 System.out.println("----------------------------------------");
+								for( float i = 1 , j = valor ; (i < numero +1) ; i++ ) {
+									DecimalFormat formatador = new DecimalFormat("0.0") ;														
+														
+											
+											System.out.println(j+ " x " +i+ " = " +formatador.format(i*j)+" "
+									               + "      " +j+ " / " +i+ " = " +formatador.format(j/i));
+										 	
+											}System.out.println("----------------------------------------");
+								
+										for( float i = 1 , j = valor ; (i < numero +1) ; i++ ) {
+											DecimalFormat formatador = new DecimalFormat("0.0") ;														
+											
+											
+											System.out.println(j+ " + " +i+ " = " +formatador.format(i+j)+" "
+											       + "      " +j+ " - " +i+ " = " +formatador.format(j-i));
+										  }}
+										     System.out.println("----------------------------------------");						
+								}
+							
+								System.out.println();
+								//System.out.println("Para encerrar digite qualquer número");
+							//	System.out.println("Para continuar digite [1]");
+								//num = in.nextInt();
+				
+					//if(num == 0 || num != 1 ) {
+					
+				//	System.out.println("Programa encerrado!");
+					
+								//	}
+								
+					//}
+					
+					//while(num == 1 );
+			
+			//}
+		//}
+			
+	}
+	
+}
+
+	    
+		
+	
