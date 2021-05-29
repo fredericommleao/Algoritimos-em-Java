@@ -1,0 +1,139 @@
+import java.util.Scanner;
+	public class exerc12L05grupo2 {
+		
+		public static void main(String[] args){
+	@SuppressWarnings("resource")
+	Scanner	in = new Scanner(System.in); //comando_necessário para_a leitura_de_dados
+		//TODO Auto-generated method stub
+
+	/*
+	 * TESTES REALIZADOS :	 
+	 * Repetir quantas vezes o programa ? 
+3
+Digite o 1° número : 
+7
+Digite o 2° número : 
+8
+Digite 1 p/ retornar o quociente inteiro de uma divisão
+Digite 2 p/ retornar a multiplicação de dois números
+Digite 3 p/ retornar o soma de dois números
+Digite 4 p/ retornar a subtração de dois números
+1
+O quociente inteiro da divisão
+7.0 ÷ 8.0 = 0.0
+--------------------------------------------------------
+
+Digite o 1° número : 
+3
+Digite o 2° número : 
+2
+Digite 1 p/ retornar o quociente inteiro de uma divisão
+Digite 2 p/ retornar a multiplicação de dois números
+Digite 3 p/ retornar o soma de dois números
+Digite 4 p/ retornar a subtração de dois números
+2
+A multiplicação de 3.0 x 2.0 = 6.0
+--------------------------------------------------------
+
+Digite o 1° número : 
+4
+Digite o 2° número : 
+3
+Digite 1 p/ retornar o quociente inteiro de uma divisão
+Digite 2 p/ retornar a multiplicação de dois números
+Digite 3 p/ retornar o soma de dois números
+Digite 4 p/ retornar a subtração de dois números
+2
+A multiplicação de 4.0 x 3.0 = 12.0
+--------------------------------------------------------
+
+Deseja repetir mais vezes ? digite 's' p/sim 'n' p/nao
+n
+Programa encerrado
+	 * 
+	 * 
+	 */
+	char X = 's' ;	//Variavel do tipo char com nome 'X' recebe 's'
+	
+	while(X == 's' || X == 'S')	//loop de repetição valido enquanto X = 's' ou 'S'
+	{
+	
+	System.out.println("Repetir quantas vezes o programa ? ");	//imprime mensagem na tela
+	int x = in.nextInt();	//variavel inteira com nome 'x' recebendo seu valor apartir da leitura
+	
+	for(int i = 1 ; i <= x ; i++) //loop de repetição for que define quantas vezes o programa vai repetir
+	{
+	
+	System.out.println("Digite o 1° número : ");	//imprime mensagem na tela
+	double n1 = in.nextDouble();	//faz a leitura da variavel tipo double 'n1'
+	
+	System.out.println("Digite o 2° número : ");	//imprime mensagem na tela
+	double n2 = in.nextDouble();	//faz a leitura da variavel tipo double 'n2'
+	
+	System.out.println("Digite 1 p/ retornar o quociente inteiro de uma divisão"); //imprime mensagem na tela
+	
+	System.out.println("Digite 2 p/ retornar a multiplicação de dois números");		//imprime mensagem na tela
+	
+	System.out.println("Digite 3 p/ retornar o soma de dois números");				//imprime mensagem na tela
+	
+	System.out.println("Digite 4 p/ retornar a subtração de dois números");			//imprime mensagem na tela
+	
+	int opção = in.nextInt();		//leitura da variavel opção do tipo inteira que será utilizada no switch case
+	
+	if(opção > 4 || opção < 1)	//filtragem dos valores que serão digitados p/ variavel opção
+	{ 
+		System.out.println("Opção inválida número digitado : "+opção); 				//imprime mensagem na tela
+	}
+	
+	switch(opção)	//switch opção
+	{
+	
+			case 1 : //caso usuário digite '1' esse case será acionado 
+			double div = (int)(n1/n2) ; 	//cálculo da divisãi inteira das variáveis n1 por n2 
+			
+			System.out.println("O quociente inteiro da divisão\n"	//imprime resultado na tela
+							 + ""+n1+" ÷ "+n2+" = "+div);
+			break ;
+			case 2 : //caso usuário digite '2' esse case será acionado 
+			double multi = n1 * n2 ;	//calculo da multiplicação das variáveis n1 * n2 
+			
+			System.out.println("A multiplicação de "+n1+" x "+n2+" = "+multi);	//imprime resultado na tela
+	
+			break ;
+			case 3 ://caso usuário digite '3' esse case será acionado 
+			double soma = n1 + n2 ;	//calculo da soma das variáveis n1 e n2 
+			
+			System.out.println("A soma de "+n1+" + "+n2+" = "+soma);		//imprime resultado na tela
+			
+			break ;
+			case 4 ://caso usuário digite '4' esse case será acionado 
+			double subtra = n1 - n2 ;
+			
+			System.out.println("A soma de "+n1+" + "+n2+" = "+subtra);		//imprime resultado na tela
+	
+			break ;
+				}
+			System.out.println("--------------------------------------------------------");	//imprime linha pontilhada na tela 
+			System.out.println();	//imprime linha vazia na tela
+	
+			}
+	
+			 System.out.println("Deseja repetir mais vezes ? digite 's' p/sim 'n' p/nao");	//imprime mensagem na tela
+			 X = in.next().charAt(0);	//faz a leitura da variavel 'X' do tipo char 
+										//para determinar a continuação ou termino do programa
+										
+			/*
+			 * Não foi feito o tratamento para caracteres diferentes de 's'/'S' ou seja mesmo que a mensagem
+			 * diga para digitar 'n' para encerrar o código qualquer letra encerra o programa, como vemos abaixo:
+			 * 
+			 * --------------------------------------------------------
+
+		   	 Deseja repetir mais vezes ? digite 's' p/sim 'n' p/nao
+		   	 g
+		   	 Programa encerrado
+			 * 
+			 */
+			}	
+			System.out.println("Programa encerrado");		//imprime mensagem na tela
+	}
+}
