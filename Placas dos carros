@@ -1,0 +1,165 @@
+
+import java.util.Scanner; 
+import java.text.DecimalFormat;		
+
+public class Lista02exercicio11{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			Scanner in = new Scanner(System.in); 
+			DecimalFormat formatador = new DecimalFormat("0.00");
+			System.out.println("=============================");
+			System.out.println("Formato da placa\rdos veículos ex: {AAA 5 6 7 8}  ");
+			System.out.println("                  ===========");
+			System.out.println("Digite as letras da placa :");
+			String letras = in.nextLine();
+			if(letras.length() != 3 ) {
+				
+				 System.err.println("Formato das letras inválido!");
+				
+				 
+				}else
+					if(letras.length() == 3) {
+						
+					letras = letras.toUpperCase();
+						
+						System.out.println("Digite os números da placa :");
+						double n = in.nextDouble();
+						double numero = n ;
+						double centenas = 0 ;	//variavel_centena
+						double dezenas = 0 ;	//variavel_dezena
+						double unidade = 0 ;	//variavel_unidade
+						double milhar = 0 ;	
+					
+						double nu = n / 1000 ;
+						
+						if( nu > 10) {
+							System.out.println();
+							 System.err.println("Formato dos números inválido!");
+							System.out.println("Número digitado : "+n);
+							
+							}else
+								if( nu < 10) {
+						
+						unidade  = numero % 10 ;	//system.out.println(unidade );										//unidade_recebe_o_resto_da_divisao_de_numero_por_10
+						numero   = numero / 10 ;											//numero_recebe_numero_dividido_por_10
+						dezenas  = numero % 10 ;	//System.out.println(dezenas);										//dezena_recebe_resto_da_divisao_de_numero_por_10
+						numero   = numero / 10 ;											//numero_recebe_numero_divido_por_10
+						centenas = numero % 10;		//System.out.println(centenas);											//centenas_recebe_o_resto_da_divisao_de_numero_por_10
+						milhar	 = numero / 10 ;		//System.out.println(milhar);
+						
+					
+						int x = (int)milhar ;	int y = (int)centenas ;
+						int w = (int)dezenas ; int z = (int)unidade ;
+						
+						
+						int c = ((int)unidade) ;
+						
+						if((int)dezenas == 1 && (int)unidade == 0) {
+							
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de outubro.");
+							
+							}else
+								if((int)dezenas == 1 && (int)unidade == 1) {
+									
+									System.out.println("----------------------------");
+									System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+									System.out.println("----------------------------");
+									System.out.println("Emplacamento deve ser renovado\nno mês de novembro.");
+									
+									
+								}else
+									if((int)dezenas == 1 && (int)unidade == 2) {
+										
+										System.out.println("----------------------------");
+										System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+										System.out.println("----------------------------");
+										System.out.println("Emplacamento deve ser renovado\nno mês de dezembro.");
+										
+									}else
+						
+						
+						switch(c) {
+						
+						case 1 :
+							
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de janeiro.");
+							break;
+							
+							
+						case 2 :
+							
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de fevereiro.");
+							break;
+							
+							
+						case 3 :
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de março.");
+							break;
+							
+							
+						case 4 :
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de abril.");
+							break;
+							
+							
+						case 5 :
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de maio.");
+							break;
+							
+							
+						case 6 :	
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de junho.");
+							break;
+							
+							
+						case 7 :
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de julho.");
+							break;
+							
+						case 8 :
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de agosto.");
+							break;
+							
+							
+						case 9 :
+							System.out.println("----------------------------");
+							System.out.println("Placa do veículo\r{ "+letras+" "+x+" "+y+" "+w+" "+z+" }");
+							System.out.println("----------------------------");
+							System.out.println("Emplacamento deve ser renovado\nno mês de setembro.");
+							break;
+							
+							
+				}
+			}	
+		}	
+	}
+}
+
