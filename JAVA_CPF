@@ -1,0 +1,161 @@
+import java.util.Scanner; 
+public class Lista02exercicio11{
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		
+			Scanner in = new Scanner(System.in); 
+			
+			double soma1 = 0 , soma2 = 0 ; double resto1 = 0 ,
+			resto2 = 0 ; double j = 0 , k = 0 ; double verific = 0 ;
+			
+		//=============================================================//
+			
+			System.out.println("------------------------------------");
+			System.out.println("         Verificador de CPF         ");
+			System.out.println("------------------------------------");
+			System.out.println();			
+			System.out.println("Digita os 9 primeiros numeros : ");
+			String CPF = in.nextLine();
+			
+			if(CPF.length() == 9) {
+			
+			double aDouble1 = Double.parseDouble(CPF);
+			
+			final double cpf = aDouble1 ;
+			
+			System.out.println("Digite os 2 digitos verificadores :");	
+			String VERIFIC = in.nextLine();
+			
+			if(VERIFIC.length() == 2) {
+			
+			double aDouble2 = Double.parseDouble(VERIFIC);	
+				
+			verific = aDouble2 ;
+			
+			
+		//=============================================================//
+					
+			final double a = (int)( cpf/100000000); 
+			final double b = (int)( cpf/10000000);  
+			final double c = (int)( cpf/1000000);  
+			final double d = (int)( cpf/100000);
+			final double e = (int)( cpf/10000);
+			final double f = (int)( cpf/1000);
+			final double g = (int)( cpf/100);
+			final double h = (int)( cpf/10);
+			final double i = (int)( cpf/1);
+		
+		//==============================================================//
+		
+			double b1 = b - (a*10) ;
+				double c1 = c - (b*10) ;
+					double d1 = d - (c*10) ;
+						double e1 = e - (d*10) ;
+							double f1 = f - (e*10) ;
+								double g1 = g - (f*10) ;
+									double h1 = h - (g*10) ;
+										double i1 = i - (h*10) ;
+	
+		//================================================================//
+		//System.out.print(a+"  "+b1+"  "+c1+"  "+d1+"  "+e1+" "
+		//+ " "+f1+"  "+g1+"  "+h1+"  "+i1);
+		System.out.println();
+		
+		soma1 = (a*10)+(b1*9)+(c1*8)+(d1*7)+(e1*6)+(f1*5)+(g1*4)+(h1*3)+(i1*2) ;
+		//System.out.println(soma1);
+	
+		resto1 = soma1%11 ;
+		//System.out.println(resto1);
+		
+		if(resto1 == 0 || resto1 == 1) {
+			
+			j = 0 ;
+			
+				}else
+					if(resto1>1) {
+						
+						j = 11 - resto1 ;
+					}
+		
+		//System.out.println("O primeiro digito é "+(int)j);
+	
+		soma2 = (a*11)+(b1*10)+(c1*9)+(d1*8)+(e1*7)+(f1*6)+(g1*5)+(h1*4)+(i1*3)+(j*2);
+		//System.out.println(soma2);
+		
+		resto2 = soma2%11 ;
+		//System.out.println(resto2);
+		
+		if(resto2 == 0 || resto2 == 1) 
+		
+		{
+			k = 0 ;
+			
+				}else
+					if(resto2>1) {
+						
+						k = 11 - resto2 ;
+					}
+		
+		//System.out.println("O segundo digito é "+(int)k);
+	
+		
+		//=================================================================//
+		
+	//System.out.println("O cpf é "+resul+" mais os digitos :"+(int)j+" "+(int)k);
+	
+	   verific = verific/10 ;
+	  
+	   double valor = verific ;
+	   int parteInteira = (int)valor;
+	   double parteFracionaria = valor - parteInteira;
+	   parteFracionaria = parteFracionaria * 10 ;
+	   
+	   //System.out.println(parteInteira);
+	
+	 //  System.out.println(Math.round(parteFracionaria));
+	  
+	   if((int)valor == (int)j && (int)k == Math.round(parteFracionaria) ) {
+		   
+		   	  System.out.println("-----------------------------------");
+			  System.out.println();
+		   	  System.out.println("O cpf "+CPF+"-"+VERIFIC+" é válido.");
+			  System.out.println();
+			  System.out.println("-----------------------------------");
+		   
+	     	}else
+	     		if((int)valor != (int)j || (int)k != Math.round(parteFracionaria)) {
+	     			
+	     		  System.out.println("-----------------------------------");
+	   			  System.out.println();
+	   		   	  System.out.println("O cpf "+CPF+"-"+VERIFIC+" é inválido.");
+	   			  System.out.println();
+	   			  System.out.println("-----------------------------------");
+	     			
+	     			}
+				}else
+					if(VERIFIC.length() != 2) {
+						
+						System.out.println("Verificador inválido");
+						
+					}
+			
+			}else
+				if(CPF.length() != 9) {
+					
+				System.out.println("Digitos inválidos");	
+					
+			}
+					
+		}
+	}
+
+	
+			
+		
+	
+		
+			
+		
+	
