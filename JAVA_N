@@ -1,0 +1,53 @@
+import java.util.Scanner; 
+public class Lista02exercicio11{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			Scanner in = new Scanner(System.in); 
+			
+			System.out.println("Digite o primeiro número : ");
+			int n1 = in.nextInt();
+			System.out.println("Digite o segundo número");
+			int n2 = in.nextInt();
+			
+			int c = 0 ; int a = 0 , b = 0 ;
+			int d = 0 ; int e = n1 , f = n2 ;
+			
+			int condicao = n1 ;
+			
+			for(int i = 0 ; i<= condicao ; i++) {
+				
+				if(n1>=n2) {
+				
+				n1 = n1 - n2 ;
+				if(n1 >= 0) {
+					c = c + 1 ;
+					}
+				if(n1>=0) {
+					
+				d = n1 ;	
+				}
+			}else
+				if(n2>n1) {
+					
+					
+				a = 0 ; b = n1 ;
+			
+				}
+		}
+			
+		if(e>f) {
+			
+			System.out.println();
+			System.out.println("Quociente = "+c);
+			System.out.println("Resto = "+d);
+			}else
+				if(f>e) {
+					
+					System.out.println();
+					System.out.println("Quociente = "+a);
+					System.out.println("Resto = "+b);
+		}
+	}
+}
+	
